@@ -15,13 +15,13 @@ resource "aws_s3_bucket" "object" {
 
 
 resource "aws_s3_object" "object_404" {
-  bucket = "gwettlaufertestbucket455646"
+  bucket = "tewsytughvhgvhghgc"
   key    = "404.html"
   source = "404.html"
 
 }
 resource "aws_s3_object" "index" {
-  bucket = "gwettlaufertestbucket455646"
+  bucket = "tewsytughvhgvhghgc"
   key    = "index.html"
   source = "index.html"
 
