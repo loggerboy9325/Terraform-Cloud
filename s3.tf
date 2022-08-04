@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "object" {
-  bucket = "gwettlaufertestbucket455646"
+  bucket = "tewsytughvhgvhghgc"
   acl    = "public-read"
   policy = file("policy.json")
 
