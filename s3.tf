@@ -1,8 +1,5 @@
-resource "aws_s3_bucket" "testbucket" {
+resource "aws_s3_object" "object" {
   bucket = "myterraformcloudtestbucket"
-
-  tags = {
-    "Env" : "Dev",
-    "Video" : "CloudQuickLabs"
-  }
+  key    = "new_object_key"
+  source = "index.html"
 }
