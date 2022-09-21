@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "object" {
-  bucket = "tewsytughvhgvhghgc"
+  bucket = "resumecloud13"
   acl    = "public-read"
   policy = file("policy.json")
 
@@ -15,13 +15,13 @@ resource "aws_s3_bucket" "object" {
 
 
 resource "aws_s3_object" "object_404" {
-  bucket = "tewsytughvhgvhghgc"
+  bucket = "resumecloud13"
   key    = "404.html"
   source = "404.html"
 
 }
 resource "aws_s3_object" "index" {
-  bucket = "tewsytughvhgvhghgc"
+  bucket = "resumecloud13"
   key    = "index.html"
   source = "index.html"
 
