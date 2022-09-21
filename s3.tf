@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "b" {
-  bucket = "terraformtest3434243324"
+  bucket = "resumecloud13"
 
   tags = {
     Name        = "My bucket"
@@ -7,13 +7,10 @@ resource "aws_s3_bucket" "b" {
   }
 }
 
-resource "aws_s3_bucket_acl" "example" {
-  bucket = aws_s3_bucket.b.id
-  acl    = "private"
-}
+
 
 resource "aws_s3_bucket_object" "object" {
-  bucket = "terraformtest3434243324"
+  bucket = "resumecloud13"
   key    = "new_object_key"
   source = "index.html"
 
