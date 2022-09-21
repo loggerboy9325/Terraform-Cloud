@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "object" {
-  bucket = "resumecloud13"
+  bucket = "terraformtest1243343454355"
   acl    = "public-read"
   policy = file("policy.json")
 
@@ -15,13 +15,13 @@ resource "aws_s3_bucket" "object" {
 
 
 resource "aws_s3_object" "object_404" {
-  bucket = "resumecloud13"
+  bucket = "terraformtest1243343454355"
   key    = "404.html"
   source = "404.html"
 
 }
 resource "aws_s3_object" "index" {
-  bucket = "resumecloud13"
+  bucket = "terraformtest1243343454355"
   key    = "index.html"
   source = "index.html"
 
