@@ -45,7 +45,7 @@ resource "aws_s3_object" "ccp" {
 
     }
 
-resource "aws_s3_bucket_website_configuration" "example" {
+resource "aws_s3_bucket_website_configuration" "websitebucket" {
   bucket = var.bucket
 
   index_document {
