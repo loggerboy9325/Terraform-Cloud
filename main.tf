@@ -12,8 +12,5 @@ terraform {
       name = "test-workspace"
     }
   }
-}
 
-provider "aws" {
-  region = "us-east-1"
-}
+

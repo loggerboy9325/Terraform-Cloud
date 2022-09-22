@@ -1,4 +1,4 @@
-resource "aws_s3_bucket" "b" {
+resource "aws_s3_bucket" "resume" {
   bucket = "resumecloud13"
 
   tags = {
@@ -9,12 +9,23 @@ resource "aws_s3_bucket" "b" {
 
 
 
-resource "aws_s3_object" "object" {
+resource "aws_s3_object" "index" {
   bucket = "resumecloud13"
-  key    = "new_object_key"
+  key    = "index"
   source = "index.html"
+ 
 
  depends_on = [
-    aws_s3_bucket.b
+    aws_s3_bucket.resume
+  ]
+}
+
+resource "aws_s3_object" "script" {
+  bucket = "resumecloud13"
+  key    = "script"
+  source = "script.js"
+  
+  depends_on = [
+    aws_s3_bucket.resume
   ]
 }
