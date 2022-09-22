@@ -44,18 +44,3 @@ resource "aws_s3_object" "ccp" {
 
 
     }
-
-<<<<<<< HEAD
-=======
-  resource "aws_s3_object" "ssa" {
-  bucket = var.bucket
-  key    = "ssa"
-  source = "front-end/images/SAA.png"
-     }
-
- resource "aws_s3_object" "sap" {
-  bucket = var.bucket
-  key    = "SAP"
-  source = "front-end/images/SAP.png"
- }
->>>>>>> 3d40fc43a3298b7d36f53f8150df1ab1b4a05927
