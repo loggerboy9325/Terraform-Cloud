@@ -45,3 +45,14 @@ resource "aws_s3_object" "ccp" {
 
     }
 
+     resource "aws_s3_object" "ssa" {
+  bucket = var.bucket
+  key    = "ssa"
+  source = "front-end/images/SAA.jpg"
+     }
+
+ resource "aws_s3_object" "sap" {
+  bucket = var.bucket
+  key    = "SAP"
+  source = "front-end/images/SAP.jpg"
+ }
