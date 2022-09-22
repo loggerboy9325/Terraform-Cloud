@@ -11,7 +11,7 @@ resource "aws_s3_bucket" "resume" {
 
 resource "aws_s3_object" "index" {
   bucket = "resumecloud13"
-  key    = "index"
+  key    = "index.html"
   source = "index.html"
  
 
@@ -22,7 +22,7 @@ resource "aws_s3_object" "index" {
 
 resource "aws_s3_object" "script" {
   bucket = "resumecloud13"
-  key    = "script"
+  key    = "script.js"
   source = "script.js"
   
   depends_on = [
