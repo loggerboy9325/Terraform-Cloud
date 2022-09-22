@@ -53,7 +53,7 @@ resource "aws_s3_bucket_website_configuration" "websitebucket" {
   }
 
   error_document {
-    key = "front-end/error.html"
+    key = "front-end/404.html"
   }
 
   routing_rule {
