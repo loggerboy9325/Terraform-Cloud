@@ -9,7 +9,7 @@ resource "aws_s3_bucket" "b" {
 
 
 
-resource "aws_s3_bucket_object" "object" {
+resource "aws_s3_object" "object" {
   bucket = "resumecloud13"
   key    = "new_object_key"
   source = "index.html"
