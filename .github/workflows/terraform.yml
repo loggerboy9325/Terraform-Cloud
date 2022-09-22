@@ -8,8 +8,9 @@ on:
 jobs:
   terraform:
    defaults:
-      run:
-        working-directory: ./back-end
+      run: |
+        cd ./back-end
+        
     name: "Terraform"
     runs-on: ubuntu-latest
     
