@@ -12,5 +12,5 @@ terraform {
       name = "test-workspace"
     }
   }
-
+}
 
