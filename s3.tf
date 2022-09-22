@@ -29,7 +29,7 @@ resource "aws_s3_object" "script" {
 resource "aws_s3_object" "ccp" {
   bucket = var.bucket
   key    = "ccp.png"
-  source = "front-end/images/CCP.png"
+  source = "images/CCP.png"
  
 
  
@@ -38,7 +38,7 @@ resource "aws_s3_object" "ccp" {
     resource "aws_s3_object" "portrait" {
   bucket = var.bucket
   key    = "portrait"
-  source = "front-end/images/portrait.jpg"
+  source = "images/portrait.jpg"
  
 
 
@@ -48,6 +48,12 @@ resource "aws_s3_object" "ccp" {
       resource "aws_s3_object" "ssa" {
   bucket = var.bucket
   key    = "ssa"
-  source = "front-end/images/SAA.png"
+  source = "images/SAA.png"
      }
+
+ resource "aws_s3_object" "sap" {
+  bucket = var.bucket
+  key    = "SAP"
+  source = "images/SAP.png"
+ }
 
