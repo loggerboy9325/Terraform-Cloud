@@ -29,3 +29,25 @@ resource "aws_s3_object" "script" {
     aws_s3_bucket.resume
   ]
 }
+
+resource "aws_s3_object" "ccp" {
+  bucket = "resumecloud13"
+  key    = "ccp.png"
+  source = "images/CCP.png"
+ 
+
+ depends_on = [
+    aws_s3_bucket.resume
+ ]
+}
+
+    resource "aws_s3_object" "portrait" {
+  bucket = "resumecloud13"
+  key    = "portrait"
+  source = "images/portrait.jpg"
+ 
+
+ depends_on = [
+    aws_s3_bucket.resume
+ ]
+    }
