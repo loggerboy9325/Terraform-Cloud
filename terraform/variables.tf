@@ -14,16 +14,12 @@ variable "endpoint" {
 variable "domain_name" {
   description = "Domain name"
   type        = string
-  default = "terraformtest.com"
+  default = "gwresume.com"
 }
 
-variable "domain" { default = "terraformtest.com" }
-variable "domainAlias" { default = "terraformtest.com" }
-variable "subdomain" { default = "terraformtest.com" }
-variable "subdomainAlias" { default = "terraformtest.com" }
-variable "cdnSubDomain" { default = "terraformtest.com" }
-variable "cf_alias_zone_id" {
-  description = "Fixed hardcoded constant zone_id that is used for all CloudFront distributions"
-  default = "Z2FDTNDATAQYW2"
+variable "domain" { 
+  default = "gwresume.com" 
 }
+
+
 
