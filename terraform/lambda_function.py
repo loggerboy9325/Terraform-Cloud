@@ -2,7 +2,7 @@ import boto3
 import json
 
 dynamodb = boto3.resource('dynamodb')
-table = dynamodb.Table('visitors_counter')
+table = dynamodb.Table('GameScores')
 
 def lambda_handler(event, context):
    
@@ -25,20 +25,16 @@ def lambda_handler(event, context):
             'ID': 'visitors',
             'Numbers': count
         }
-        
     )
-            
-        
-    return{
-        'statuscode': 200,
-        'headers':{
-            'Access-Control-Allow-Headers': '*',
-            'Access-Control-Allow-Orgin': '*',
-            'Access-Control-Allow-Methods': '*'
-        },
-        'body': count
+   
+           
+      
+    return {
+        'statusCode': 200,
+        'body':json.dumps({"visitor":str(count)}),
+        'headers': {
+        'Access-Control-Allow-Origin': '*',
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Headers':'*'
         }
-    
-    
-        
-    
+    }

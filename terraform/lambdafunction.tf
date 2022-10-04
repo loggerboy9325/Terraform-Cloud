@@ -7,6 +7,7 @@ resource "aws_iam_role" "iam_for_lambda" {
   "Statement": [
     {
       "Action": "sts:AssumeRole",
+        
       "Principal": {
         "Service": "lambda.amazonaws.com"
       },
@@ -15,6 +16,7 @@ resource "aws_iam_role" "iam_for_lambda" {
     }
   ]
 }
+
 EOF
 }
 
@@ -50,3 +52,9 @@ resource "aws_lambda_function" "test_lambda" {
 
 
 
+
+
+resource "aws_iam_role_policy_attachment" "attach_dynamoDB_policy"{
+    role = aws_iam_role.iam_for_lambda.name
+    policy_arn = "arn:aws:iam::aws:policy/AmazonDynamoDBFullAccess"
+}

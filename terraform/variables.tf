@@ -27,13 +27,3 @@ variable "cf_alias_zone_id" {
   default = "Z2FDTNDATAQYW2"
 }
 
-variable "accountId" {
-  type = string
-  
-}
-
-variable "region" {
-  type = string
-  default = "us-east-1"
-  
-}
