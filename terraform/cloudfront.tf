@@ -94,7 +94,7 @@ resource "aws_acm_certificate" "cert" {
 }
 
 data "aws_route53_zone" "route53_zone" {
-  name = "terraformtest.com"
+  name = "gwresume.com"
   private_zone = false
   
 }
