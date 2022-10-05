@@ -62,6 +62,12 @@ resource "aws_route53_record" "websiteurl" {
   zone_id = data.aws_route53_zone.domain.zone_id
   type    = "A"
 
+  resource "aws_route53_record" "subdomain" {
+  name    = www.var.domain_name
+  zone_id = data.aws_route53_zone.domain.zone_id
+  type    = "A"
+
+
   alias {
      
     name                   = aws_cloudfront_distribution.cdn.domain_name
