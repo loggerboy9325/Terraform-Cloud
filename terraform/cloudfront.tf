@@ -12,7 +12,7 @@ resource "aws_cloudfront_distribution" "cdn" {
   default_root_object = "index.html"
 
 
-  aliases = [var.domain_name]
+  aliases = [var.domain_name, var.sub_domain]
   price_class = "PriceClass_200"
   retain_on_delete = false
   
@@ -97,7 +97,7 @@ resource "aws_cloudfront_origin_access_identity" "oai" {
 
 resource "aws_acm_certificate" "cert" {
  
-  domain_name               = var.domain_name
+  domain_name               = var.domain_name 
   validation_method         = "DNS"
   tags                      = local.tags
 
