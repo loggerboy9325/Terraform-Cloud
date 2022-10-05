@@ -97,8 +97,8 @@ resource "aws_cloudfront_origin_access_identity" "oai" {
 
 resource "aws_acm_certificate" "cert" {
  
-  domain_name               = "*.gwresume.com"
-  subject_alternative_names = ["*www.gwresume.com"]
+  domain_name               = "gwresume.com"
+  subject_alternative_names = ["www.gwresume.com"]
   validation_method         = "DNS"
   tags                      = local.tags
 
