@@ -62,6 +62,8 @@ resource "aws_route53_record" "websiteurl" {
   zone_id = data.aws_route53_zone.domain.zone_id
   type    = "A"
 
+  
+
   alias {
      
     name                   = aws_cloudfront_distribution.cdn.domain_name
@@ -71,7 +73,20 @@ resource "aws_route53_record" "websiteurl" {
   
   }
 }
+  resource "aws_route53_record" "subdomainrecord" {
+  name    = var.sub_domain
+  zone_id = data.aws_route53_zone.domain.zone_id
+  type    = "A"
+
   
+
+  alias {
+     
+    name                   = aws_cloudfront_distribution.cdn.domain_name
+    zone_id                = aws_cloudfront_distribution.cdn.hosted_zone_id
+    evaluate_target_health = true
+  }
+  }
 
 
 resource "aws_cloudfront_origin_access_identity" "oai" {

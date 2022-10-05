@@ -23,3 +23,7 @@ variable "domain" {
 
 
 
+variable "sub_domain" {
+  default = "www.gwresume.com"
+  
+}
