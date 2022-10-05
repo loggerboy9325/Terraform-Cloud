@@ -74,7 +74,7 @@ resource "aws_route53_record" "websiteurl" {
   }
 }
   resource "aws_route53_record" "subdomainrecord" {
-  name    = www.gwresume.com
+  name    = var.sub_domain
   zone_id = data.aws_route53_zone.domain.zone_id
   type    = "A"
 
