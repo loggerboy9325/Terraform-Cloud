@@ -97,7 +97,7 @@ resource "aws_cloudfront_origin_access_identity" "oai" {
 
 resource "aws_acm_certificate" "cert" {
  
-  domain_name               = var.domain_name 
+  domain_name               =  [var.domain_name, var.sub_domain]
   validation_method         = "DNS"
   tags                      = local.tags
 
