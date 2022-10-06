@@ -27,3 +27,8 @@ variable "sub_domain" {
   default = "www.gwresume.com"
   
 }
+
+variable "lambda_function_name" {
+  default = "test-function"
+
+}
