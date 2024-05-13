@@ -8,6 +8,16 @@ resource "aws_s3_bucket" "resume" {
   }
 }
 
+resource "aws_s3_object" "pdf" {
+  bucket = var.bucket
+  key    = "ResumeFinal.pdf"
+  source = "./website_files/ResumeFinal.pdf"
+ 
+ depends_on = [
+   aws_s3_bucket.resume
+ ]
+ 
+}
 
 
 
@@ -44,6 +54,8 @@ resource "aws_s3_object" "ccp" {
  ]
  
 }
+
+
 
     resource "aws_s3_object" "portrait" {
   bucket = var.bucket
