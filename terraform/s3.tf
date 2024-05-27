@@ -8,10 +8,10 @@ resource "aws_s3_bucket" "resume" {
   }
 }
 
-resource "aws_s3_object" "pdf" {
+resource "aws_s3_object" "dockercert" {
   bucket = var.bucket
   key    = "ResumeFinal.pdf"
-  source = "./website_files/ResumeFinal.pdf"
+  source = "./website_files/images/docker.png"
  
  depends_on = [
    aws_s3_bucket.resume
@@ -19,6 +19,27 @@ resource "aws_s3_object" "pdf" {
  
 }
 
+resource "aws_s3_object" "gocert" {
+  bucket = var.bucket
+  key    = "ResumeFinal.pdf"
+  source = "./website_files/images/go.png"
+ 
+ depends_on = [
+   aws_s3_bucket.resume
+ ]
+ 
+}
+
+resource "aws_s3_object" "pdf" {
+  bucket = var.bucket
+  key    = "ResumeFinal.pdf"
+  source = "./website_files/George_wettlaufer_resume.pdf"
+ 
+ depends_on = [
+   aws_s3_bucket.resume
+ ]
+ 
+}
 
 
 
